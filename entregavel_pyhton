@@ -1,9 +1,4 @@
 #programa 1
-from audioop import reverse
-from operator import invert
-import string
-
-
 def ver_igualdade (l):
     primeiro = l[0]
     ultimo = l[-1]
