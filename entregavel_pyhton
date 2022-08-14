@@ -1,0 +1,66 @@
+#programa 1
+from audioop import reverse
+from operator import invert
+import string
+
+
+def ver_igualdade (l):
+    primeiro = l[0]
+    ultimo = l[-1]
+    return print(primeiro == ultimo)
+
+#programa 2
+def divisores(n):
+    lista_divisores=[]
+    for i in range(1,n+1):
+            if n%i == 0:
+                lista_divisores.insert(0,i) #adicionei os divisores de trás pra frente para na hora de verificar o maior, o programa iterar a lista do maior para o menor, otimizando o código.
+    return lista_divisores
+
+def e_primo(n):
+    if n > 1:
+        div = divisores(n)
+        if len(div)>2:
+            return False
+        else:
+            return True
+    else:
+        return False
+
+def ultimo_divisor_primo(n):
+    l_divisores = divisores(n)
+    for i in l_divisores:
+        if e_primo(i):
+            return print("O último divisor do número primo é {}".format(i))
+        
+#programa 3
+def palindromo (n):
+    numero_str_invertido = int(str(n)[::-1])
+    if n == numero_str_invertido:
+        return print ("{} é um número palíndromo".format(n))
+    else:
+        return print("{} não é um número palíndromo".format(n))
+
+#programa 4
+
+def soma_primos_menores_que_mil():
+    l=[]
+    for i in range(1000):
+        if e_primo(i):
+            l.append(i)
+    return print("A soma dos {} números primos menores que 1000 é {}".format(len(l),sum(l)))
+
+
+
+#rodando programa 1
+ver_igualdade([1,34,35,323,564,6,2323,4535,1]) 
+#ver_igualdade([1,34,35,323,564,6,2323,4535,4]) 
+
+#rodando programa 2
+#ultimo_divisor_primo(75)
+
+#rodando programa 3
+#palindromo(404)
+
+#rodando programa 4
+#soma_primos_menores_que_mil()
