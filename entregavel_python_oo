@@ -25,6 +25,7 @@ class AUVs:
     def tabela_AUVs(self):
 
         janela  = Tk()
+        janela.geometry('1280x720')
         janela.title('Tabela AUVs')
         tree = ttk.Treeview(janela,selectmode="browse",columns=("coluna1", "coluna2", "coluna3", "coluna4", "coluna5"), show='headings')
         tree.column("coluna1",width=50, minwidth=50, stretch=NO)
@@ -42,18 +43,18 @@ class AUVs:
         tree.column("coluna5",width=200, minwidth=50, stretch=NO)
         tree.heading("#5", text='Controlador')
         
-        botao = Button(janela, text='AUV INDIVIDUALMENTE', width=20, command=self.robo_individual)
+        botao = Button(janela, text='AUV INDIVIDUALMENTE', width=15, command=self.robo_individual)
         botao.place(x=0,y=100)
 
-        botao2 = Button(janela, text='VISITAR SITE', width=20, command=self.site_nautilus)
-        botao2.place(x=150,y=100)
+        botao2 = Button(janela, text='VISITAR SITE', width=15, command=self.site_nautilus)
+        botao2.place(x=180,y=100)
 
-        botao3 = Button(janela, text='RANKING AUVs', width=20, command=self.rank_robos)
-        botao3.place(x=300,y=100)
+        botao3 = Button(janela, text='RANKING AUVs', width=15, command=self.rank_robos)
+        botao3.place(x=360,y=100)
 
         global entrada
         entrada = Entry(janela,width=20)
-        entrada.place(x=450,y = 100)
+        entrada.place(x=540,y = 100)
         
         lista = [lua,BrHUE,grandpa]
         for i in lista:
@@ -90,10 +91,10 @@ class AUVs:
             print("Digite uma entrada válida! Os nomes estão na coluna do ""nome do veículo""")
 
 
-teste_com_parametro = AUVs(*lua) #caso teste dessa forma, a caixa de texto não funciona
+#teste_com_parametro = AUVs(*lua) #caso teste dessa forma, a caixa de texto não funciona
                                      #basta clicar no botão desejado
 
-#teste_sem_parametro = AUVs() #caso teste dessa forma, escrever o nome do AUV desejado e clicar em um dos botões.
+teste_sem_parametro = AUVs() #caso teste dessa forma, escrever o nome do AUV desejado e clicar em um dos botões.
 
 
     
