@@ -16,8 +16,8 @@ class Listner():
         x_linear, y_linear, z_linear, x_angular, y_angular, z_angular = msg.linear.x, msg.linear.y, msg.linear.z, msg.angular.x, msg.angular.y, msg.angular.z
         modulo_linear = sqrt((x_linear**2)+(y_linear**2)+(z_linear**2))
         modulo_angular = sqrt((x_angular**2)+(y_angular**2)+(z_angular**2))
-        f_linear = Float64
-        f_angular = Float64
+        f_linear = Float64()
+        f_angular = Float64()
         f_linear.data = modulo_linear
         f_angular.data = modulo_angular
         rospy.loginfo(modulo_linear)
