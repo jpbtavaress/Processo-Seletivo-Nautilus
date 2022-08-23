@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <rosparam command="load" file="$(find pkg)/param/param_ros_avancado.yaml"/>
+    <node name="star_position" pkg="pkg" type="tf_broadcast.py">
+    </node>
+</launch>
+
+    

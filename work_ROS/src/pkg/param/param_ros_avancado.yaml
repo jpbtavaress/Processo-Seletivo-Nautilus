@@ -1,0 +1,12 @@
+"solar_system": [
+     {"astro": "terra",
+     "raio_astro": 3,
+      "parent": "sol",
+      "velocidade": 5
+     },
+     {"astro": "satelite",
+     "raio_astro": 1,
+      "parent": "terra",
+      "velocidade": 10
+     }
+]
